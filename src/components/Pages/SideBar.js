@@ -3,10 +3,15 @@ import { motion } from 'framer-motion'
 import { BsFillCalendarMinusFill } from 'react-icons/bs';
 import { BsFillChatFill } from 'react-icons/bs';
 import { CgCalendarTwo } from 'react-icons/cg';
-import { FaMobile } from 'react-icons/fa';
+import { RiHandbagFill } from 'react-icons/ri';
 import { CgMenuRight } from 'react-icons/cg';
-import { BiGridAlt } from 'react-icons/bi';
-import { HiChevronUp } from 'react-icons/hi';
+import { AiOutlineWifi } from 'react-icons/ai';
+import { BiGridAlt,BiUserCheck } from 'react-icons/bi';
+import { TbBook } from 'react-icons/tb';
+import { GrCodeSandbox } from 'react-icons/gr';
+import { HiChevronDown, HiChevronUp } from 'react-icons/hi';
+import { MdEmail, MdInventory } from 'react-icons/md';
+
 
 
 const sidebarVariants = {
@@ -75,7 +80,7 @@ const SideBar = ({ progress, setProgress }) => {
     console.log(progress)
 
     return (
-        <div className="lg:block hidden">
+        <div className="lg:block hidden sticky top-0">
 
             {/* nav link  */}
             <motion.div
@@ -84,10 +89,10 @@ const SideBar = ({ progress, setProgress }) => {
 
                 className=''
             >
-                <motion.div className='fixed top-[0] bg-[#1d1c1c] w-[260px] left-0 text-gray-600' variants={LinkBoxVariants}
+                <motion.div className=' bg-[#1d1c1c] w-[260px] fixed top-0 bottom-0 overflow-y-hidden hover:overflow-y-auto overflow-x-hidden left-0 text-gray-600 sidebar' variants={LinkBoxVariants}
 
                 >
-                    <div className="overflow-x-hidden sidebar   " >
+                    <div className="overflow-x-hidden" >
                         <div className="flex justify-end w-full pr-2">
                             <CgMenuRight
                                 className="text-3xl rotate-180"
@@ -95,8 +100,8 @@ const SideBar = ({ progress, setProgress }) => {
                         </div>
 
                         <div className=" mt-16">
-                            <motion.ul className=" min-h-[100vh] px-2" >
-                                <div className="flex justify-between items-center text-white font-bold">
+                            <motion.ul className=" min-h-[100vh]  overflow-x-hidden px-2" >
+                                <div className="flex  justify-between items-center text-white font-bold">
                                     <div className="flex ">
                                         <span>
                                             <BiGridAlt
@@ -175,8 +180,149 @@ const SideBar = ({ progress, setProgress }) => {
                                         </span>
                                         File Manager
                                     </motion.li>
+                                    <motion.li
+                                        whileHover={{ scale: 1.1, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
+                                        className="mt-5 flex items-center pb-3 font-bold text-[18px] li-style "
+                                    >
+                                        <span>
+                                            <RiHandbagFill
+                                                className="mr-3 text-xl"
+                                            />
+                                        </span>
+                                        <div className="flex justify-between items-center w-full">
+                                            <span>
+                                                Ecommerce
+                                            </span>
+                                            <span>
+                                                <HiChevronDown
+                                                    className="text-xl font-bold"
+                                                />
+                                            </span>
+                                        </div>
+                                    </motion.li>
+                                    <motion.li
+                                        whileHover={{ scale: 1.1, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
+                                        className="mt-5 flex items-center pb-3 font-bold text-[18px] li-style "
+                                    >
+                                        <span>
+                                            <MdEmail
+                                                className="mr-3 text-xl"
+                                            />
+                                        </span>
+                                        <div className="flex justify-between items-center w-full">
+                                            <span>
+                                                Email
+                                            </span>
+                                            <span>
+                                                <HiChevronDown
+                                                    className="text-xl font-bold"
+                                                />
+                                            </span>
+                                        </div>
+                                    </motion.li>
+                                    <motion.li
+                                        whileHover={{ scale: 1.1, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
+                                        className="mt-5 flex items-center pb-3 font-bold text-[18px] li-style "
+                                    >
+                                        <span>
+                                            <MdInventory
+                                                className="mr-3 text-xl"
+                                            />
+                                        </span>
+                                        <div className="flex justify-between items-center w-full">
+                                            <span>
+                                                Invoices
+                                            </span>
+                                            <span>
+                                                <HiChevronDown
+                                                    className="text-xl font-bold"
+                                                />
+                                            </span>
+                                        </div>
+                                    </motion.li>
+                                    <motion.li
+                                        whileHover={{ scale: 1.1, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
+                                        className="mt-5 flex items-center pb-3 font-bold text-[18px] li-style "
+                                    >
+                                        <span>
+                                            <TbBook
+                                                className="mr-3 text-xl"
+                                            />
+                                        </span>
+                                        <div className="flex justify-between items-center w-full">
+                                            <span>
+                                                Projects
+                                            </span>
+                                            <span>
+                                                <HiChevronDown
+                                                    className="text-xl font-bold"
+                                                />
+                                            </span>
+                                        </div>
+                                    </motion.li>
+                                    <motion.li
+                                        whileHover={{ scale: 1.1, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
+                                        className="mt-5 flex items-center pb-3 font-bold text-[18px] li-style "
+                                    >
+                                        <span>
+                                            <AiOutlineWifi
+                                                className="mr-3 text-xl"
+                                            />
+                                        </span>
+                                        <div className="flex justify-between items-center w-full">
+                                            <span>
+                                                Contacts
+                                            </span>
+                                            <span>
+                                                <HiChevronDown
+                                                    className="text-xl font-bold"
+                                                />
+                                            </span>
+                                        </div>
+                                    </motion.li>
                                 </div>
-
+                                <h2 className="my-4 text-[14px] uppercase"> Layouts</h2>
+                                <h2 className="my-4 text-[14px] uppercase"> Pages</h2>
+                                <div>
+                                    <motion.li
+                                        whileHover={{ scale: 1.1, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
+                                        className="mt-5 flex items-center pb-3 font-bold text-[18px] li-style "
+                                    >
+                                        <span>
+                                            <BiUserCheck
+                                                className="mr-3 text-xl"
+                                            />
+                                        </span>
+                                        <div className="flex justify-between items-center w-full">
+                                            <span>
+                                                Authentications
+                                            </span>
+                                            <span>
+                                            <div class="badge bg-[#26ddf5] text-white border-0 ">8</div>
+                                            </span>
+                                        </div>
+                                    </motion.li>
+                                    <motion.li
+                                        whileHover={{ scale: 1.1, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
+                                        className="mt-5 flex items-center pb-3 font-bold text-[18px] li-style "
+                                    >
+                                        <span>
+                                            <GrCodeSandbox
+                                                className="mr-3 text-xl"
+                                            />
+                                        </span>
+                                        <div className="flex justify-between items-center w-full">
+                                            <span>
+                                                Utility
+                                            </span>
+                                            <span>
+                                                <HiChevronDown
+                                                    className="text-xl font-bold"
+                                                />
+                                            </span>
+                                        </div>
+                                    </motion.li>
+                                </div>
                             </motion.ul>
                         </div>
                     </div>
