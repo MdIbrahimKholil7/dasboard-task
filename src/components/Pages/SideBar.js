@@ -6,7 +6,9 @@ import { CgCalendarTwo } from 'react-icons/cg';
 import { RiHandbagFill } from 'react-icons/ri';
 import { CgMenuRight } from 'react-icons/cg';
 import { AiOutlineWifi } from 'react-icons/ai';
-import { BiGridAlt,BiUserCheck } from 'react-icons/bi';
+import { SiDatabricks } from 'react-icons/si';
+import { HiOutlinePencilAlt } from 'react-icons/hi';
+import { BiGridAlt, BiUserCheck } from 'react-icons/bi';
 import { TbBook } from 'react-icons/tb';
 import { GrCodeSandbox } from 'react-icons/gr';
 import { HiChevronDown, HiChevronUp } from 'react-icons/hi';
@@ -298,7 +300,7 @@ const SideBar = ({ progress, setProgress }) => {
                                                 Authentications
                                             </span>
                                             <span>
-                                            <div class="badge bg-[#26ddf5] text-white border-0 ">8</div>
+                                                <div class="badge bg-[#26ddf5] text-white border-0 ">8</div>
                                             </span>
                                         </div>
                                     </motion.li>
@@ -322,6 +324,51 @@ const SideBar = ({ progress, setProgress }) => {
                                             </span>
                                         </div>
                                     </motion.li>
+                                    <div>
+                                        <h2 className="text-[14px] my-5 uppercase">Components</h2>
+                                    </div>
+                                    <div>
+                                        <motion.li
+                                            whileHover={{ scale: 1.1, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
+                                            className="mt-5 flex items-center pb-3 font-bold text-[18px] li-style "
+                                        >
+                                            <span>
+                                                <SiDatabricks
+                                                    className="mr-3 text-xl"
+                                                />
+                                            </span>
+                                            <div className="flex justify-between items-center w-full">
+                                                <span>
+                                                    UI Elements
+                                                </span>
+                                                <span>
+                                                    <HiChevronDown
+                                                        className="text-xl font-bold"
+                                                    />
+                                                </span>
+                                            </div>
+                                        </motion.li>
+                                        <motion.li
+                                            whileHover={{ scale: 1.1, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
+                                            className="mt-5 flex items-center pb-3 font-bold text-[18px] li-style "
+                                        >
+                                            <span>
+                                                <HiOutlinePencilAlt
+                                                    className="mr-3 text-xl"
+                                                />
+                                            </span>
+                                            <div className="flex justify-between items-center w-full">
+                                                <span>
+                                                    Forms
+                                                </span>
+                                                <span>
+                                                    <HiChevronDown
+                                                        className="text-xl font-bold"
+                                                    />
+                                                </span>
+                                            </div>
+                                        </motion.li>
+                                    </div>
                                 </div>
                             </motion.ul>
                         </div>
