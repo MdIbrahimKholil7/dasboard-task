@@ -82,7 +82,7 @@ const SideBar = ({ progress, setProgress }) => {
     console.log(progress)
 
     return (
-        <div className="lg:block hidden sticky top-0">
+        <div className="lg:block hidden ">
 
             {/* nav link  */}
             <motion.div
@@ -91,10 +91,10 @@ const SideBar = ({ progress, setProgress }) => {
 
                 className=''
             >
-                <motion.div className=' bg-[#1d1c1c] w-[260px] fixed top-0 bottom-0 overflow-y-hidden hover:overflow-y-auto overflow-x-hidden left-0 text-gray-600 sidebar' variants={LinkBoxVariants}
+                <motion.div className=' bg-[#1d1c1c] w-[260px] fixed  top-0 bottom-0 overflow-y-hidden hover:overflow-y-auto overflow-x-hidden left-0 text-gray-600 sidebar  cursor-pointer' variants={LinkBoxVariants}
 
                 >
-                    <div className="overflow-x-hidden" >
+                    <div className="overflow-x-hidden " >
                         <div className="flex justify-end w-full pr-2">
                             <CgMenuRight
                                 className="text-3xl rotate-180"
