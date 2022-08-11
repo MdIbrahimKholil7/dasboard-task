@@ -27,10 +27,9 @@ const sidebarVariants = {
     },
 
     sidebarClosed: {
-        width: "0px",
+        width: "40px",
         transition: {
             delay: 0.1,
-
         }
     },
 
@@ -54,21 +53,6 @@ const LinkBoxVariants = {
     },
 };
 
-const imgVariants = {
-    hidden: {
-        opacity: 0,
-        pathLength: 0
-    },
-    visible: {
-        opacity: 1,
-        pathLength: 1,
-        transition: {
-            duration: 1,
-            ease: 'easeInOut'
-        }
-    }
-}
-
 
 // theme handler 
 
@@ -82,27 +66,31 @@ const SideBar = ({ progress, setProgress }) => {
     console.log(progress)
 
     return (
-        <div className="lg:block hidden ">
+        <motion.div className="lg:block hidden"
+
+        >
 
             {/* nav link  */}
             <motion.div
+
                 variants={sidebarVariants}
                 animate={open ? "sidebarOpen" : "sidebarClosed"}
-
                 className=''
             >
-                <motion.div className=' bg-[#1d1c1c] w-[260px] fixed  top-0 bottom-0 overflow-y-hidden hover:overflow-y-auto overflow-x-hidden left-0 text-gray-600 sidebar  cursor-pointer' variants={LinkBoxVariants}
+                <motion.div className=' bg-[#1d1c1c]  fixed  top-0 bottom-0 overflow-y-hidden hover:overflow-y-auto overflow-x-hidden left-0 text-gray-600 sidebar  cursor-pointer py-9' variants={LinkBoxVariants}
 
                 >
                     <div className="overflow-x-hidden " >
                         <div className="flex justify-end w-full pr-2">
                             <CgMenuRight
+                                onClick={handleToggler}
                                 className="text-3xl rotate-180"
+
                             />
                         </div>
 
-                        <div className=" mt-16">
-                            <motion.ul className=" min-h-[100vh]  overflow-x-hidden px-2" >
+                        <div className=" mt-16 ">
+                            <motion.ul className=" min-h-[100vh]  overflow-x-hidden overflow-y-hidden px-2" >
                                 <div className="flex  justify-between items-center text-white font-bold">
                                     <div className="flex ">
                                         <span>
@@ -121,21 +109,21 @@ const SideBar = ({ progress, setProgress }) => {
                                 </div>
                                 <div className="ml-10 text-white">
                                     <motion.li
-                                        whileHover={{ scale: 1.1, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
+                                        whileHover={{ scale: 1.1, originX: 0, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
                                         className="mt-5 flex justify-start pb-3 font-bold text-[18px] li-style "
                                     >
                                         Ecommerce
                                     </motion.li>
 
                                     <motion.li
-                                        whileHover={{ scale: 1.1, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
+                                        whileHover={{ scale: 1.1, originX: 0, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
                                         className="mt-5 flex justify-start pb-3 font-bold text-[18px] li-style text-gray-600"
                                     >
                                         Saas
                                     </motion.li>
 
                                     <motion.li
-                                        whileHover={{ scale: 1.1, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
+                                        whileHover={{ scale: 1.1, originX: 0, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
                                         className="   mt-5 flex justify-start pb-3 font-bold text-[18px] li-style text-gray-600"
                                     >
                                         Crypto
@@ -147,7 +135,7 @@ const SideBar = ({ progress, setProgress }) => {
                                 </div>
                                 <div>
                                     <motion.li
-                                        whileHover={{ scale: 1.1, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
+                                        whileHover={{ scale: 1.1, originX: 0, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
                                         className="mt-5 flex items-center pb-3 font-bold text-[18px] li-style "
                                     >
                                         <span>
@@ -158,7 +146,7 @@ const SideBar = ({ progress, setProgress }) => {
                                         Calender
                                     </motion.li>
                                     <motion.li
-                                        whileHover={{ scale: 1.1, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
+                                        whileHover={{ scale: 1.1, originX: 0, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
                                         className="mt-5 flex items-center pb-3 font-bold text-[18px] li-style w-full"
                                     >
                                         <span>
@@ -172,7 +160,7 @@ const SideBar = ({ progress, setProgress }) => {
                                         </div>
                                     </motion.li>
                                     <motion.li
-                                        whileHover={{ scale: 1.1, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
+                                        whileHover={{ scale: 1.1, originX: 0, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
                                         className="mt-5 flex items-center pb-3 font-bold text-[18px] li-style "
                                     >
                                         <span>
@@ -183,7 +171,7 @@ const SideBar = ({ progress, setProgress }) => {
                                         File Manager
                                     </motion.li>
                                     <motion.li
-                                        whileHover={{ scale: 1.1, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
+                                        whileHover={{ scale: 1.1, originX: 0, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
                                         className="mt-5 flex items-center pb-3 font-bold text-[18px] li-style "
                                     >
                                         <span>
@@ -203,7 +191,7 @@ const SideBar = ({ progress, setProgress }) => {
                                         </div>
                                     </motion.li>
                                     <motion.li
-                                        whileHover={{ scale: 1.1, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
+                                        whileHover={{ scale: 1.1, originX: 0, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
                                         className="mt-5 flex items-center pb-3 font-bold text-[18px] li-style "
                                     >
                                         <span>
@@ -223,7 +211,7 @@ const SideBar = ({ progress, setProgress }) => {
                                         </div>
                                     </motion.li>
                                     <motion.li
-                                        whileHover={{ scale: 1.1, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
+                                        whileHover={{ scale: 1.1, originX: 0, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
                                         className="mt-5 flex items-center pb-3 font-bold text-[18px] li-style "
                                     >
                                         <span>
@@ -243,7 +231,7 @@ const SideBar = ({ progress, setProgress }) => {
                                         </div>
                                     </motion.li>
                                     <motion.li
-                                        whileHover={{ scale: 1.1, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
+                                        whileHover={{ scale: 1.1, originX: 0, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
                                         className="mt-5 flex items-center pb-3 font-bold text-[18px] li-style "
                                     >
                                         <span>
@@ -263,7 +251,7 @@ const SideBar = ({ progress, setProgress }) => {
                                         </div>
                                     </motion.li>
                                     <motion.li
-                                        whileHover={{ scale: 1.1, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
+                                        whileHover={{ scale: 1.1, originX: 0, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
                                         className="mt-5 flex items-center pb-3 font-bold text-[18px] li-style "
                                     >
                                         <span>
@@ -287,7 +275,7 @@ const SideBar = ({ progress, setProgress }) => {
                                 <h2 className="my-4 text-[14px] uppercase"> Pages</h2>
                                 <div>
                                     <motion.li
-                                        whileHover={{ scale: 1.1, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
+                                        whileHover={{ scale: 1.1, originX: 0, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
                                         className="mt-5 flex items-center pb-3 font-bold text-[18px] li-style "
                                     >
                                         <span>
@@ -305,7 +293,7 @@ const SideBar = ({ progress, setProgress }) => {
                                         </div>
                                     </motion.li>
                                     <motion.li
-                                        whileHover={{ scale: 1.1, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
+                                        whileHover={{ scale: 1.1, originX: 0, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
                                         className="mt-5 flex items-center pb-3 font-bold text-[18px] li-style "
                                     >
                                         <span>
@@ -329,7 +317,7 @@ const SideBar = ({ progress, setProgress }) => {
                                     </div>
                                     <div>
                                         <motion.li
-                                            whileHover={{ scale: 1.1, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
+                                            whileHover={{ scale: 1.1, originX: 0, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
                                             className="mt-5 flex items-center pb-3 font-bold text-[18px] li-style "
                                         >
                                             <span>
@@ -349,7 +337,7 @@ const SideBar = ({ progress, setProgress }) => {
                                             </div>
                                         </motion.li>
                                         <motion.li
-                                            whileHover={{ scale: 1.1, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
+                                            whileHover={{ scale: 1.1, originX: 0, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
                                             className="mt-5 flex items-center pb-3 font-bold text-[18px] li-style "
                                         >
                                             <span>
@@ -375,7 +363,7 @@ const SideBar = ({ progress, setProgress }) => {
                     </div>
                 </motion.div>
             </motion.div>
-        </div>
+        </motion.div>
     );
 };
 

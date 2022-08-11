@@ -7,7 +7,7 @@ import flag from '../../assets/flag.webp'
 import actor from '../../assets/actor.jpg'
 const DashboardHeader = () => {
     return (
-        <div className='w-full '>
+        <div className='w-full pr-2 pt-5  '>
             <div className='flex justify-between items-center w-full'>
                 <div>
                     <h1 className='text-2xl '>Dashboard</h1>
@@ -19,7 +19,7 @@ const DashboardHeader = () => {
                         />
                     </div>
                     <div>
-                        <img className='w-[40px] object-cover' src={flag} alt="" />
+                        <img className='w-[30px] object-cover' src={flag} alt="" />
                     </div>
                     <div>
                         <BiGridAlt 
@@ -39,7 +39,7 @@ const DashboardHeader = () => {
                       
                     </div>
                     <div>
-                        <img className='w-[40px] object-cover rounded-full' src={actor} alt="" />
+                        <img className='w-[30px] object-cover rounded-full' src={actor} alt="" />
                     </div>
                 </div>
             </div>
