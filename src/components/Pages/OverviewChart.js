@@ -44,12 +44,13 @@ const OverviewChart = () => {
 
     return (
         <div className='w-full mt-14 '>
-            <div>
+            <div className='flex justify-between items-center w-full mb-4'>
                 <div>
-                    <h1>Overview</h1>
+                    <h1 className=' font-bold'>Overview</h1>
                 </div>
-                <div>
-                    <select class="select select-sm w-full max-w-xs">
+                <div className='flex items-center'>
+                    <p className=' font-bold'>Sort By:</p>
+                    <select class="">
                         
                         <option>Yearly</option>
                         <option>Monthly</option>
@@ -59,12 +60,12 @@ const OverviewChart = () => {
             </div>
             <div className='w-full flex justify-between mt-14 gap-3'>
 
-                <div>
-                    <div>
-                        <h1>This Month</h1>
-                        <div className='flex gap-5'>
-                            <p>$24,568</p>
-                            <p className='bg-[#6dddbb2f] px-1 rounded-full text-[#23a129fa]'>+ 2.65%</p>
+                <div className='w-full'>
+                    <div className='w-full'>
+                        <h1 >This Month</h1>
+                        <div className='flex gap-5 w-full'>
+                            <p className='text-2xl font-bold mt-2'>$24,568</p>
+                            <p className='bg-[#6dddbb2f] px-1 rounded-full flex justify-center items-center text-[#23a129fa]'>+ 2.65%</p>
                         </div>
                     </div>
                 </div>
