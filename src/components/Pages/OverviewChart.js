@@ -49,7 +49,12 @@ const OverviewChart = () => {
                     <h1>Overview</h1>
                 </div>
                 <div>
-                    
+                    <select class="select select-sm w-full max-w-xs">
+                        
+                        <option>Yearly</option>
+                        <option>Monthly</option>
+                        <option>Weekly</option>
+                    </select>
                 </div>
             </div>
             <div className='w-full flex justify-between mt-14 gap-3'>
