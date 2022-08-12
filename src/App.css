@@ -92,3 +92,9 @@ body{
   color: var(--primary);
 }
 
+.shadow{
+  border-radius: 32px;
+/* background: #e0e0e0; */
+box-shadow:  13px 13px 26px #c5c5c5,
+             -13px -13px 26px #fbfbfb;
+}

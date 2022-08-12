@@ -45,7 +45,7 @@ const OverviewChart = () => {
     ]
 
     return (
-        <div className='w-full mt-14 '>
+        <div className='w-full mt-14 shadow p-[5px]'>
             <div className='flex justify-between items-center w-full mb-4'>
                 <div>
                     <h1 className=' font-bold'>Overview</h1>
@@ -67,11 +67,11 @@ const OverviewChart = () => {
                         <h1 >This Month</h1>
                         <div className='flex gap-5 '>
                             <p className='text-2xl font-bold mt-2'>$24,568</p>
-                            <p className='bg-[#6dddbb2f] px-1 rounded-full flex justify-center items-center text-[#23a129fa]'>+ 2.65%</p>
+                            <p className='bg-[#6dddbb2f] px-1 py-0 rounded-full flex justify-center items-center text-[#23a129fa] text-[14px]'>+ 2.65%</p>
                         </div>
-                        <div className='mt-3'>
-                            <div className='flex w-[210px] justify-between border-b-2 border-black border-solid'>
-                                <div className='w-full border-r-2 border-black border-solid'>
+                        <div className='mt-9'>
+                            <div className='flex w-[210px] justify-between border-b-2 border-[#d4d2d2] border-solid'>
+                                <div className='w-full border-r-2 border-[#d4d2d2] border-solid'>
                                     <h3 className='text-gray-400'>Orders</h3>
                                     <p className='text-[18px] font-bold pb-3'>5,643</p>
                                 </div>
@@ -80,7 +80,27 @@ const OverviewChart = () => {
                                     <p className='text-[18px] font-bold pb-3'>16,273</p>
                                 </div>
                             </div>
-                            {/* <div className="divider pt-0 mt-0"></div> */}
+                            <div className='flex w-[210px] justify-between border-b-2 border-[#d4d2d2] border-solid'>
+                                <div className='w-full border-r-2 border-[#d4d2d2] border-solid pt-5'>
+                                    <h3 className='text-gray-400'>Orders</h3>
+                                    <p className='text-[18px] font-bold pb-3'>5,643</p>
+                                </div>
+                                <div className='w-full pl-2 pt-5'>
+                                    <h3 className='text-gray-400'>Sales</h3>
+                                    <p className='text-[18px] font-bold pb-3'>16,273</p>
+                                </div>
+                            </div>
+                            <div className='flex w-[210px] justify-between '>
+                                <div className='w-full border-r-2 border-[#d4d2d2] border-solid pt-5'>
+                                    <h3 className='text-gray-400'>Orders</h3>
+                                    <p className='text-[18px] font-bold pb-3'>5,643</p>
+                                </div>
+                                <div className='w-full pl-2 pt-5'>
+                                    <h3 className='text-gray-400'>Sales</h3>
+                                    <p className='text-[18px] font-bold pb-3'>16,273</p>
+                                </div>
+                            </div>
+                          
                         </div>
                     </div>
                 </div>
@@ -93,7 +113,7 @@ const OverviewChart = () => {
                             <YAxis axisLine={false}/>
                             <Tooltip />
                             <Legend />
-                            <Bar dataKey="pv" fill="#8884d8" />
+                            <Bar dataKey="pv" fill="#46d5ee " />
                             <Bar />
                         </BarChart>
                     </ResponsiveContainer>

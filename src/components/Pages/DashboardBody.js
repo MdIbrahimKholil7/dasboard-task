@@ -6,6 +6,7 @@ import { HiUsers } from 'react-icons/hi';
 import coverImg from '../../assets/cover.jpg'
 import user from '../../assets/actor.jpg'
 import OverviewChart from './OverviewChart';
+import Status from './Status';
 const DashboardBody = () => {
     return (
         <div className='w-full bg-[#fffefe] min-h-screen'>
@@ -68,10 +69,12 @@ const DashboardBody = () => {
 
                         </div>
                         {/* chart section  */}
-                        <div className='w-full'>
+                        <div className='w-full pb-14'>
 
                             <OverviewChart />
-
+                            <div>
+                                <Status/>
+                            </div>
                         </div>
                     </div>
 
