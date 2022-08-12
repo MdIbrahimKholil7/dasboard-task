@@ -5,65 +5,72 @@ import { FiShoppingBag } from 'react-icons/fi';
 import { HiUsers } from 'react-icons/hi';
 import coverImg from '../../assets/cover.jpg'
 import user from '../../assets/actor.jpg'
+import OverviewChart from './OverviewChart';
 const DashboardBody = () => {
     return (
         <div className='w-full bg-[#fffefe] min-h-screen'>
             <div className='w-full'>
                 <DashboardHeader />
                 <div className='mt-9 flex gap-3 justify-between'>
-                    <div className='grid grid-cols-3 gap-3 w-full'>
+                    <div>
+                        <div className='grid grid-cols-3 gap-3 w-full'>
 
-                        <div className='flex justify-between shadow-xl px-3 h-[97px] py-6 rounded-md'>
-                            <div className='flex gap-5'>
-                                <p
-                                    className='bg-[#72c9f1]  px-3 flex justify-center items-center rounded-xl text-white'
-                                > <BiSquareRounded
-                                        className='text-xl'
-                                    /></p>
-                                <div>
-                                    <h1 className='text-[#555557]'>Revenue</h1>
-                                    <p className='text-xl font-bold'>$21,456</p>
+                            <div className='flex justify-between shadow-xl px-3 h-[97px] py-6 rounded-md'>
+                                <div className='flex gap-5'>
+                                    <p
+                                        className='bg-[#72c9f1]  px-3 flex justify-center items-center rounded-xl text-white'
+                                    > <BiSquareRounded
+                                            className='text-xl'
+                                        /></p>
+                                    <div>
+                                        <h1 className='text-[#555557]'>Revenue</h1>
+                                        <p className='text-xl font-bold'>$21,456</p>
+                                    </div>
+                                </div>
+                                <div className='flex justify-center items-end '>
+                                    <p className='bg-[#6dddbb2f] px-1 rounded-full text-[#23a129fa]'>+ 2.65%</p>
                                 </div>
                             </div>
-                            <div className='flex justify-center items-end '>
-                                <p className='bg-[#6dddbb2f] px-1 rounded-full text-[#23a129fa]'>+ 2.65%</p>
-                            </div>
-                        </div>
 
-                        <div className='flex justify-between h-[97px] shadow-xl px-3 py-6 rounded-md'>
-                            <div className='flex gap-5'>
-                                <p
-                                    className='bg-[#72c9f1]  px-3 flex justify-center items-center rounded-xl text-white'
-                                > <FiShoppingBag
-                                        className='text-xl'
-                                    /></p>
-                                <div>
-                                    <h1 className='text-[#555557]'>Orders</h1>
-                                    <p className='text-xl font-bold'>$5,643</p>
+                            <div className='flex justify-between h-[97px] shadow-xl px-3 py-6 rounded-md'>
+                                <div className='flex gap-5'>
+                                    <p
+                                        className='bg-[#72c9f1]  px-3 flex justify-center items-center rounded-xl text-white'
+                                    > <FiShoppingBag
+                                            className='text-xl'
+                                        /></p>
+                                    <div>
+                                        <h1 className='text-[#555557]'>Orders</h1>
+                                        <p className='text-xl font-bold'>$5,643</p>
+                                    </div>
+                                </div>
+                                <div className='flex justify-center items-end '>
+                                    <p className='bg-[#6dddbb2f] px-1 rounded-full text-[#23a129fa]'>- 0.82%</p>
                                 </div>
                             </div>
-                            <div className='flex justify-center items-end '>
-                                <p className='bg-[#6dddbb2f] px-1 rounded-full text-[#23a129fa]'>- 0.82%</p>
-                            </div>
-                        </div>
 
-                        <div className='flex justify-between h-[97px] shadow-xl px-3 py-6 rounded-md'>
-                            <div className='flex gap-5'>
-                                <p
-                                    className='bg-[#72c9f1]  px-3 flex justify-center items-center rounded-xl text-white'
-                                > <HiUsers
-                                        className='text-xl'
-                                    /></p>
-                                <div>
-                                    <h1 className='text-[#555557]'>Customers</h1>
-                                    <p className='text-xl font-bold'>$45,254</p>
+                            <div className='flex justify-between h-[97px] shadow-xl px-3 py-6 rounded-md'>
+                                <div className='flex gap-5'>
+                                    <p
+                                        className='bg-[#72c9f1]  px-3 flex justify-center items-center rounded-xl text-white'
+                                    > <HiUsers
+                                            className='text-xl'
+                                        /></p>
+                                    <div>
+                                        <h1 className='text-[#555557]'>Customers</h1>
+                                        <p className='text-xl font-bold'>$45,254</p>
+                                    </div>
+                                </div>
+                                <div className='flex justify-center items-end '>
+                                    <p className='bg-[#6dddbb2f] px-1 rounded-full text-[#23a129fa]'>- 1.04%</p>
                                 </div>
                             </div>
-                            <div className='flex justify-center items-end '>
-                                <p className='bg-[#6dddbb2f] px-1 rounded-full text-[#23a129fa]'>- 1.04%</p>
-                            </div>
-                        </div>
 
+                        </div>
+                        <div>
+                            <OverviewChart/>
+                            <h1>Side</h1>
+                        </div>
                     </div>
 
                     <div className='lg:w-[250px] xl:min-w-[280px] 2xl:w-[450px] pr-3'>
@@ -139,10 +146,10 @@ const DashboardBody = () => {
                                                     Sep
                                                 </p>
                                                 <p >Everyone realizes would be describe...
-                                                <span className='text-left block text-[#46d5ee]'>Read more</span>
+                                                    <span className='text-left block text-[#46d5ee]'>Read more</span>
                                                 </p>
                                             </div>
-                                            
+
                                         </div>
                                         <div className='flex gap-2 justify-between items-center text-[14px] my-5'>
                                             <p className='bg-[#f3f3f3] py-1 px-3 rounded-md'>

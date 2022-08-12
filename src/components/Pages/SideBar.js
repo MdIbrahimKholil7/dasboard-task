@@ -56,14 +56,13 @@ const LinkBoxVariants = {
 
 // theme handler 
 
-const SideBar = ({ progress, setProgress }) => {
+const SideBar = () => {
     const [open, setOpen] = useState(true)
 
     // sidebar toggler 
     const handleToggler = () => {
         setOpen(!open)
     }
-    console.log(progress)
 
     return (
         <motion.div className="lg:block hidden"
