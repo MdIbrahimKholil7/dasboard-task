@@ -27,10 +27,10 @@ const Status = () => {
             "pv": 18,
             "amt": 2000
         },
-        
-        
-       
-       
+
+
+
+
     ]
 
     return (
@@ -72,7 +72,7 @@ const Status = () => {
 
                                 </defs>
                                 <XAxis dataKey="name" />
-                                <YAxis axisLine={false}/>
+                                <YAxis axisLine={false} />
                                 {/* <CartesianGrid strokeDasharray="3 3" /> */}
                                 <Tooltip />
                                 <Area type="monotone" dataKey="uv" stroke="#f88323" fillOpacity={1} fill="url(#colorUv)" />
@@ -82,26 +82,27 @@ const Status = () => {
                     </div>
 
                 </div>
-                <div className='w-full shadow-xl bg-red-500'>
-                    <div className='w-full flex justify-between items-center'>
-                        <h1>User Activity</h1>
-                        <select>
-                            <option>Weekly</option>
-                            <option>Monthly</option>
-                            <option>Yearly</option>
-                        </select>
+                <div className='w-full shadow-xl px-3'>
+                    <div className='w-full flex justify-between items-center px-2 pt-3'>
+                        <h1 className='font-bold'>Order Status</h1>
+                        <p className='text-xl'>...</p>
                     </div>
-                    <div className='flex justify-between '>
+                    <div className='flex justify-between p-2 rotate-[240deg] mt-7'>
                         <div>
-                            <h1>This Month</h1>
-                            <p>16,543</p>
-                        </div>
-                        <div className='flex'>
-                            <p><span className='w-[30px] h-[30px] bg-red-500 rounded-full'></span>Current</p>
-                            <p><span className='w-[30px] h-[30px] bg-red-500 rounded-full'></span>Previous</p>
+                            <div class="donut instalment2">
+                                <div class="donut-default"></div>
+                                <div class="donut-line"></div>
+                                <div class="donut-text"></div>
+                                <div class="donut-case"></div>
+                            </div>
                         </div>
                     </div>
-
+                    <div className="divider"></div>
+                    <div className='flex justify-between items-center w-full'>
+                        <h1 className='text-gray-400 text-[14px]'>Completed</h1>
+                        <h1 className='text-gray-400 text-[14px]'>Cancel</h1>
+                        <h1 className='text-gray-400 text-[14px]'>Pending</h1>
+                    </div>
                 </div>
                 <div className='w-full shadow-xl bg-red-500'>
                     <div className='w-full flex justify-between items-center'>
