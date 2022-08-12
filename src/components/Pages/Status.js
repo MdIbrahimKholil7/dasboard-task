@@ -104,23 +104,71 @@ const Status = () => {
                         <h1 className='text-gray-400 text-[14px]'>Pending</h1>
                     </div>
                 </div>
-                <div className='w-full shadow-xl bg-red-500'>
+                <div className='w-full shadow-xl px-3 pt-4'>
                     <div className='w-full flex justify-between items-center'>
-                        <h1 className='font-bold'>User Activity</h1>
+                        <h1 className='font-bold'>Top Product</h1>
                         <select>
-                            <option>Weekly</option>
                             <option>Monthly</option>
                             <option>Yearly</option>
+                            <option>Weekly</option>
                         </select>
                     </div>
-                    <div className='flex justify-between '>
-                        <div>
-                            <h1>This Month</h1>
-                            <p>16,543</p>
+                    <div className=' '>
+                        <div className='flex items-center justify-between my-5'>
+                            <div className='flex gap-3 items-center'>
+                                <div className='bg-[#46d5eecc] p-2 rounded-md text-white font-bold'>
+                                    #1
+                                </div>
+                                <div className='text-[14px]'>
+                                    <p className='text-gray-400'>Polo blue shirt</p>
+                                    <p className='font-bold leading-9'>$ 25.4</p>
+                                </div>
+                            </div>
+                            <div className='bg-[#f2f5ef] px-3 rounded-full py-1 font-bold'>
+                                <p>3.82k</p>
+                            </div>
                         </div>
-                        <div className='flex'>
-                            <p><span className='w-[30px] h-[30px] bg-red-500 rounded-full'></span>Current</p>
-                            <p><span className='w-[30px] h-[30px] bg-red-500 rounded-full'></span>Previous</p>
+                        <div className='flex items-center justify-between my-5'>
+                            <div className='flex gap-3 items-center'>
+                                <div className='bg-[#46d5eecc] p-2 rounded-md text-white font-bold'>
+                                    #2
+                                </div>
+                                <div className='text-[14px]'>
+                                    <p className='text-gray-400'>Hoodie for men</p>
+                                    <p className='font-bold leading-9'>$ 24.5</p>
+                                </div>
+                            </div>
+                            <div className='bg-[#f2f5ef] px-3 rounded-full py-1 font-bold'>
+                                <p>3.14k</p>
+                            </div>
+                        </div>
+                        <div className='flex items-center justify-between my-5'>
+                            <div className='flex gap-3 items-center'>
+                                <div className='bg-[#46d5eecc] p-2 rounded-md text-white font-bold'>
+                                    #3
+                                </div>
+                                <div className='text-[14px]'>
+                                    <p className='text-gray-400'>Red color cap</p>
+                                    <p className='font-bold leading-9'>$ 22.5</p>
+                                </div>
+                            </div>
+                            <div className='bg-[#f2f5ef] px-3 rounded-full py-1 font-bold'>
+                                <p>2.84k</p>
+                            </div>
+                        </div>
+                        <div className='flex items-center justify-between my-5'>
+                            <div className='flex gap-3 items-center'>
+                                <div className='bg-[#46d5eecc] p-2 rounded-md text-white font-bold'>
+                                    #4
+                                </div>
+                                <div className='text-[14px]'>
+                                    <p className='text-gray-400'>Rocket T-shirt</p>
+                                    <p className='font-bold leading-9'>$20.4</p>
+                                </div>
+                            </div>
+                            <div className='bg-[#f2f5ef] px-3 rounded-full py-1 font-bold'>
+                                <p>2.06k</p>
+                            </div>
                         </div>
                     </div>
 

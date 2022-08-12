@@ -105,7 +105,7 @@ const OverviewChart = () => {
                     </div>
                 </div>
 
-                <div className='w-[70%]'>
+                <div className='w-[70%] relative'>
                     <ResponsiveContainer width='100%' aspect={2}>
                         <BarChart data={data}>
                             {/* <CartesianGrid /> */}
@@ -117,6 +117,9 @@ const OverviewChart = () => {
                             <Bar />
                         </BarChart>
                     </ResponsiveContainer>
+                    <div className='bg-white w-[70%] absolute bottom-8  left-9 h-[80px]'>
+
+                    </div>
                 </div>
 
             </div>

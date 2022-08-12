@@ -79,7 +79,7 @@ const DashboardBody = () => {
                     </div>
 
                     <div className='2xl:ml-[446px] xl:ml-[312px]  relative'>
-                        <div className='lg:w-[250px] xl:min-w-[280px] 2xl:w-[400px] pr-3 fixed top-16 right-3 '>
+                        <div className='lg:w-[250px] xl:min-w-[280px] 2xl:w-[400px] pr-3 fixed top-16 right-[0px] '>
                             <div className='shadow-2xl '>
                                 <div className='cover-img relative w-full h-[100px]'>
                                     <img className='w-full object-cover h-full rounded-md rounded-tl-lg rounded-tr-lg' src={coverImg} alt="" />
