@@ -1,5 +1,8 @@
 
 
+body{
+  overflow-x: hidden;
+}
 .sidebar::-webkit-scrollbar-track {
   border: 1px solid #000;
   padding: 2px 0;

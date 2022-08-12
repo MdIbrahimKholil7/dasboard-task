@@ -6,40 +6,42 @@ const OverviewChart = () => {
 
     const data = [
         {
-            "name": "Page A",
-            "uv": 4000,
-            "pv": 2400
+            "name": "Feb",
+            
+            "pv": 40
         },
         {
-            "name": "Page B",
-            "uv": 3000,
-            "pv": 1398
+            "name": "Mar",
+            "pv": 30
         },
         {
-            "name": "Page C",
-            "uv": 2000,
-            "pv": 9800
+            "name": "Apr",
+            "pv": 34
         },
         {
-            "name": "Page D",
-            "uv": 2780,
-            "pv": 3908
+            "name": "May",
+            "pv": 38
         },
         {
-            "name": "Page E",
-            "uv": 1890,
-            "pv": 4800
+            "name": "Jun",
+            "pv": 24
         },
         {
-            "name": "Page F",
-            "uv": 2390,
-            "pv": 3800
+            "name": "Jul",
+            "pv": 29
         },
         {
-            "name": "Page G",
-            "uv": 3490,
-            "pv": 4300
-        }
+            "name": "Aug",
+            "pv": 33
+        },
+        {
+            "name": "Sep",
+            "pv": 30
+        },
+        {
+            "name": "Oct",
+            "pv": 39
+        },
     ]
 
     return (
@@ -58,24 +60,37 @@ const OverviewChart = () => {
                     </select>
                 </div>
             </div>
-            <div className='w-full flex justify-between mt-14 gap-3'>
+            <div className=' flex justify-between  mt-14 '>
 
-                <div className='w-full'>
-                    <div className='w-full'>
+                <div className=''>
+                    <div className=''>
                         <h1 >This Month</h1>
-                        <div className='flex gap-5 w-full'>
+                        <div className='flex gap-5 '>
                             <p className='text-2xl font-bold mt-2'>$24,568</p>
                             <p className='bg-[#6dddbb2f] px-1 rounded-full flex justify-center items-center text-[#23a129fa]'>+ 2.65%</p>
+                        </div>
+                        <div className='mt-3'>
+                            <div className='flex w-[210px] justify-between border-b-2 border-black border-solid'>
+                                <div className='w-full border-r-2 border-black border-solid'>
+                                    <h3 className='text-gray-400'>Orders</h3>
+                                    <p className='text-[18px] font-bold pb-3'>5,643</p>
+                                </div>
+                                <div className='w-full pl-2'>
+                                    <h3 className='text-gray-400'>Sales</h3>
+                                    <p className='text-[18px] font-bold pb-3'>16,273</p>
+                                </div>
+                            </div>
+                            {/* <div className="divider pt-0 mt-0"></div> */}
                         </div>
                     </div>
                 </div>
 
-                <div>
-                    <ResponsiveContainer width={400} aspect={2}>
+                <div className='w-[70%]'>
+                    <ResponsiveContainer width='100%' aspect={2}>
                         <BarChart data={data}>
-                            <CartesianGrid />
-                            <XAxis dataKey="name" />
-                            <YAxis />
+                            {/* <CartesianGrid /> */}
+                            <XAxis dataKey="name"/>
+                            <YAxis axisLine={false}/>
                             <Tooltip />
                             <Legend />
                             <Bar dataKey="pv" fill="#8884d8" />
