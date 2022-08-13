@@ -10,9 +10,11 @@ import Status from './Status';
 const DashboardBody = () => {
     return (
         <div className='w-full bg-[#fffefe] min-h-screen'>
-            <div className='w-full'>
-                <DashboardHeader />
-                <div className='mt-9 overflow-x-hidden w-full flex gap-1 '>
+            <div className='w-full ml-[-30px] relative'>
+                <div className='w-full '>
+                    <DashboardHeader />
+                </div>
+                <div className='mt-20 overflow-x-hidden w-full flex gap-1 z-[-20]'>
                     <div className='w-full'>
                         <div className='grid grid-cols-3 gap-3 w-full'>
 
@@ -73,13 +75,14 @@ const DashboardBody = () => {
 
                             <OverviewChart />
                             <div>
-                                <Status/>
+                                <Status />
                             </div>
                         </div>
                     </div>
 
-                    <div className='2xl:ml-[446px] xl:ml-[312px]  relative'>
-                        <div className='lg:w-[250px] xl:min-w-[280px] 2xl:w-[400px] pr-3 fixed top-16 right-[0px] '>
+                    {/* profile section  */}
+                    <div className='2xl:ml-[446px] xl:ml-[312px] mt-20 relative'>
+                        <div className='lg:w-[250px] xl:min-w-[280px] 2xl:w-[400px] pr-3 fixed top-20 right-[0px] '>
                             <div className='shadow-2xl '>
                                 <div className='cover-img relative w-full h-[100px]'>
                                     <img className='w-full object-cover h-full rounded-md rounded-tl-lg rounded-tr-lg' src={coverImg} alt="" />

@@ -117,9 +117,7 @@ const OverviewChart = () => {
                             <Bar />
                         </BarChart>
                     </ResponsiveContainer>
-                    <div className='bg-white w-[70%] absolute bottom-8  left-9 h-[80px]'>
-
-                    </div>
+                   
                 </div>
 
             </div>

@@ -7,10 +7,10 @@ import flag from '../../assets/flag.webp'
 import actor from '../../assets/actor.jpg'
 const DashboardHeader = () => {
     return (
-        <div className='w-full  pt-5 xl:pr-9 lg:pr-4 '>
+        <div className='w-full pt-5  sticky top-0 left-3 z-10'>
             <div className='flex justify-between items-center w-full'>
                 <div>
-                    <h1 className='text-2xl '>Dashboard</h1>
+                    <h1 className='text-2xl'>Dashboard</h1>
                 </div>
                 <div className='flex items-center gap-5'>
                     <div>
