@@ -18,7 +18,7 @@ import { MdEmail, MdInventory } from 'react-icons/md';
 
 const sidebarVariants = {
     sidebarOpen: {
-        width: "260px",
+        width:'250px',
         transition: {
             // when: "beforeChildren",
             delay: 0.1,
@@ -27,7 +27,7 @@ const sidebarVariants = {
     },
 
     sidebarClosed: {
-        width: "100px",
+        width: 0,
         transition: {
             delay: 0.1,
         }
@@ -37,7 +37,7 @@ const sidebarVariants = {
 
 const LinkBoxVariants = {
     sidebarOpen: {
-        width: '203px',
+        x:0,
         opacity: 1,
         transition: {
             // delay: 0.1,
@@ -45,7 +45,7 @@ const LinkBoxVariants = {
         }
     },
     sidebarClosed: {
-        width: '55px',
+       x:'-100vw',
         opacity: 1,
         transition: {
             delay: 0.1
@@ -54,33 +54,24 @@ const LinkBoxVariants = {
 };
 
 
-const SideBar = () => {
-
-    const [open, setOpen] = useState(true)
-
-    // sidebar toggler 
-    const handleToggler = () => {
-        setOpen(!open)
-        console.log(open)
-    }
-
+const MobileSideBar = ({openSide}) => {
+    console.log(openSide)
     return (
-        <motion.div className="lg:block hidden"
+        <motion.div className="lg:hidden block"
         >
-           
-
                 {/* nav link  */}
                 <motion.div
 
                     variants={sidebarVariants}
-                    animate={open ? "sidebarOpen" : "sidebarClosed"}
-                    className=''
+                    animate={openSide ? "sidebarOpen" : "sidebarClosed"}
+                    // animate='sidebarOpen'
+                    className='fixed top-16 left-0  bottom-0  overflow-y-auto overflow-x-hidden  text-gray-600 sidebar  z-[9999] cursor-pointer'
                 >
-                    <motion.div className=' bg-[#1d1c1c] fixed top-0 bottom-0 overflow-y-hidden hover:overflow-y-auto overflow-x-hidden left-0 text-gray-600 sidebar  cursor-pointer py-9 px-2' variants={LinkBoxVariants}
+                    <motion.div className=' bg-[#1d1c1c] overflow-y-auto overflow-x-hidden  text-gray-600 sidebar bottom-0 cursor-pointer py-9 px-2' variants={LinkBoxVariants}
 
                     >
                         <div className="overflow-x-hidden " >
-                            <div className="flex justify-between w-full pr-2 z-[787]">
+                            {/* <div className="flex justify-between w-full pr-2 z-[787]">
                                 {
                                     open && <p className="text-black">none</p>
                                 }
@@ -89,7 +80,7 @@ const SideBar = () => {
                                     className={`text-3xl hover:text-3xl rotate-180  cursor-pointer ${!open && 'ml-2'}`}
 
                                 />
-                            </div>
+                            </div> */}
 
                             <div className=" mt-16 ">
                                 <motion.ul className=" min-h-[100vh]  overflow-x-hidden overflow-y-hidden px-2" >
@@ -134,7 +125,7 @@ const SideBar = () => {
                                     </div>
                                     <div>
                                         {
-                                            open && <h2 className="uppercase text-[14px] mt-7">Applications</h2>
+                                            openSide && <h2 className="uppercase text-[14px] mt-7">Applications</h2>
                                         }
                                     </div>
                                     <div>
@@ -276,7 +267,7 @@ const SideBar = () => {
                                         </motion.li>
                                     </div>
                                     {
-                                        open && < div >
+                                        openSide && < div >
                                             <h2 className="my-4 text-[14px] uppercase"> Layouts</h2>
                                             <h2 className="my-4 text-[14px] uppercase"> Pages</h2>
                                         </div>
@@ -322,7 +313,7 @@ const SideBar = () => {
                                         </motion.li>
                                         <div>
                                             {
-                                                open && <h2 className="text-[14px] my-5 uppercase">Components</h2>
+                                                openSide && <h2 className="text-[14px] my-5 uppercase">Components</h2>
                                             }
                                         </div>
                                         <div>
@@ -378,4 +369,4 @@ const SideBar = () => {
     );
 };
 
-export default SideBar;
+export default MobileSideBar;

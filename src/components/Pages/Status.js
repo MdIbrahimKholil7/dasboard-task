@@ -35,9 +35,9 @@ const Status = () => {
 
     return (
         <div>
-            <div className='grid grid-cols-3 gap-2 mt-20'>
+            <div className='grid lg:grid-cols-3 grid-cols-1 xl:gap-2 gap-16 px-5 mt-20 xl:px-0'>
                 <div className='w-full shadow-xl'>
-                    <div className='w-full flex justify-between items-center mb-5'>
+                    <div className='w-full flex justify-between items-center mb-5 px-5 py-3'>
                         <h1 className='font-bold'>User Activity</h1>
                         <select>
                             <option>Weekly</option>
@@ -45,7 +45,7 @@ const Status = () => {
                             <option>Yearly</option>
                         </select>
                     </div>
-                    <div className='flex justify-between mb-7'>
+                    <div className='flex justify-between mb-7 p-5'>
                         <div>
                             <h1 className='text-gray-400'>This Month</h1>
                             <p className='text-[18px] font-bold leading-9'>16,543</p>
@@ -82,13 +82,14 @@ const Status = () => {
                     </div>
 
                 </div>
-                <div className='w-full shadow-xl px-3'>
+
+                <div className='w-full shadow-xl px-3 py-7'>
                     <div className='w-full flex justify-between items-center px-2 pt-3'>
                         <h1 className='font-bold'>Order Status</h1>
                         <p className='text-xl'>...</p>
                     </div>
-                    <div className='flex justify-between p-2 rotate-[240deg] mt-7'>
-                        <div>
+                    <div className='flex justify-between p-2 rotate-[240deg] w-full mt-[10px]'>
+                        <div className='flex justify-center w-full items-center'>
                             <div class="donut instalment2">
                                 <div class="donut-default"></div>
                                 <div class="donut-line"></div>
@@ -98,12 +99,13 @@ const Status = () => {
                         </div>
                     </div>
                     <div className="divider"></div>
-                    <div className='flex justify-between items-center w-full'>
+                    <div className='flex justify-between items-center  w-full'>
                         <h1 className='text-gray-400 text-[14px]'>Completed</h1>
                         <h1 className='text-gray-400 text-[14px]'>Cancel</h1>
                         <h1 className='text-gray-400 text-[14px]'>Pending</h1>
                     </div>
                 </div>
+
                 <div className='w-full shadow-xl px-3 pt-4'>
                     <div className='w-full flex justify-between items-center'>
                         <h1 className='font-bold'>Top Product</h1>

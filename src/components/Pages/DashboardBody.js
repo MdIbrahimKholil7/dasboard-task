@@ -7,7 +7,8 @@ import OverviewChart from './OverviewChart';
 import Status from './Status';
 import Profile from './Profile';
 import { motion } from 'framer-motion'
-const DashboardBody = () => {
+import MobileProfile from './MobileProfile';
+const DashboardBody = ({setOpenSide,openSide}) => {
 
     const [openProfile, setOpenProfile] = useState(true)
 
@@ -17,8 +18,8 @@ const DashboardBody = () => {
             opacity: 1,
             y: '-10%',
             transition: {
-                
-                type:'tween'
+
+                type: 'tween'
             },
 
         },
@@ -34,28 +35,30 @@ const DashboardBody = () => {
     }
 
     return (
-        <div className='w-full bg-[#fffefe] min-h-screen'>
-            <div className='w-full ml-[-30px] relative'>
+        <div className='w-full bg-[#fffefe] overflow-x-hidden min-h-screen '>
+            <div className='w-full lg:ml-[-px] z-[999] ml-0 relative'>
                 <div className='w-full '>
                     <DashboardHeader
                         openProfile={openProfile}
                         setOpenProfile={setOpenProfile}
+                        setOpenSide={setOpenSide}
+                        openSide={openSide}
                     />
                 </div>
-                <div className='mt-20 overflow-x-hidden w-full flex gap-1 z-[-20]'>
+                <div className='mt-20  w-full flex gap-1 z-[-20]'>
                     <div className='w-full'>
-                        <div className='grid grid-cols-3 gap-3 w-full'>
+                        <div className='grid lg:grid-cols-3 grid-cols-1 gap-3 sm:px-9 px-4 w-full'>
 
                             <div className='flex justify-between shadow-xl px-3 h-[97px] py-6 rounded-md'>
                                 <div className='flex gap-5'>
                                     <p
-                                        className='bg-[#72c9f1]  px-3 flex justify-center items-center rounded-xl text-white'
+                                        className='bg-[#72c9f1]  sm:px-3 px-2  flex justify-center items-center rounded-xl text-white'
                                     > <BiSquareRounded
                                             className='text-xl'
                                         /></p>
                                     <div>
                                         <h1 className='text-[#555557]'>Revenue</h1>
-                                        <p className='text-xl font-bold'>$21,456</p>
+                                        <p className='sm:text-xl text-[17px] font-bold'>$21,456</p>
                                     </div>
                                 </div>
                                 <div className='flex justify-center items-end '>
@@ -66,13 +69,13 @@ const DashboardBody = () => {
                             <div className='flex justify-between h-[97px] shadow-xl px-3 py-6 rounded-md'>
                                 <div className='flex gap-5'>
                                     <p
-                                        className='bg-[#72c9f1]  px-3 flex justify-center items-center rounded-xl text-white'
+                                        className='bg-[#72c9f1] sm:px-3 px-2 flex justify-center items-center rounded-xl text-white'
                                     > <FiShoppingBag
                                             className='text-xl'
                                         /></p>
                                     <div>
                                         <h1 className='text-[#555557]'>Orders</h1>
-                                        <p className='text-xl font-bold'>$5,643</p>
+                                        <p className='sm:text-xl text-[17px] font-bold'>$5,643</p>
                                     </div>
                                 </div>
                                 <div className='flex justify-center items-end '>
@@ -83,13 +86,13 @@ const DashboardBody = () => {
                             <div className='flex justify-between h-[97px] shadow-xl px-3 py-6 rounded-md'>
                                 <div className='flex gap-5'>
                                     <p
-                                        className='bg-[#72c9f1]  px-3 flex justify-center items-center rounded-xl text-white'
+                                        className='bg-[#72c9f1]  sm:px-3 px-2 flex justify-center items-center rounded-xl text-white'
                                     > <HiUsers
                                             className='text-xl'
                                         /></p>
                                     <div>
                                         <h1 className='text-[#555557]'>Customers</h1>
-                                        <p className='text-xl font-bold'>$45,254</p>
+                                        <p className='sm:text-xl text-[17px] font-bold'>$45,254</p>
                                     </div>
                                 </div>
                                 <div className='flex justify-center items-end '>
@@ -101,7 +104,9 @@ const DashboardBody = () => {
                         {/* chart section  */}
                         <div className='w-full pb-14'>
 
-                            <OverviewChart />
+                            <div className='w-full px-3'>
+                                <OverviewChart />
+                            </div>
                             <div>
                                 <Status />
                             </div>
@@ -110,14 +115,21 @@ const DashboardBody = () => {
 
                     {/* profile section  */}
                     <div className=''>
-                        <motion.div
-                            variants={profileVariants}
-                            animate={openProfile ? 'openProfile' : 'closeProfile'}
-                            className={`${openProfile ? '' : 'hidden'} '2xl:ml-[446px] xl:ml-[312px] relative'`}>
-                            <Profile
+                        <div className='xl:block hidden'>
+                            <motion.div
+                                variants={profileVariants}
+                                animate={openProfile ? 'openProfile' : 'closeProfile'}
+                                className={`${openProfile ? '' : 'hidden'} '2xl:ml-[446px] xl:ml-[312px] relative '`}>
+                                <Profile
+                                    openProfile={openProfile}
+                                />
+                            </motion.div>
+                        </div>
+                        <div className='xl:hidden block'>
+                            <MobileProfile
                                 openProfile={openProfile}
                             />
-                        </motion.div>
+                        </div>
                     </div>
                 </div>
             </div>
