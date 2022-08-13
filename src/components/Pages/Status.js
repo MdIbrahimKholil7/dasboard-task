@@ -48,11 +48,11 @@ const Status = () => {
                     <div className='flex justify-between mb-7 p-5'>
                         <div>
                             <h1 className='text-gray-400'>This Month</h1>
-                            <p className='text-[18px] font-bold leading-9'>16,543</p>
+                            <p className='sm:text-[18px] text-[15px] font-bold leading-9'>16,543</p>
                         </div>
                         <div className='flex items-end gap-3' >
-                            <p><span className='w-[10px] h-[10px] inline-block bg-[#46d5ee] rounded-full mr-1'></span>Current</p>
-                            <p><span className='w-[10px] h-[10px] inline-block bg-[#f88323] rounded-full mr-1'></span>Previous</p>
+                            <p className='text-[14px]'><span className='w-[10px] h-[10px] inline-block bg-[#46d5ee] rounded-full mr-1'></span>Current</p>
+                            <p className='text-[14px]'><span className='w-[10px] h-[10px] inline-block bg-[#f88323] rounded-full mr-1'></span>Previous</p>
                         </div>
                     </div>
                     <div className='w-full h-[240px]'>
@@ -126,7 +126,7 @@ const Status = () => {
                                     <p className='font-bold leading-9'>$ 25.4</p>
                                 </div>
                             </div>
-                            <div className='bg-[#f2f5ef] px-3 rounded-full py-1 font-bold'>
+                            <div className='bg-[#f2f5ef] px-3 text-[14px] sm:text-[16px] rounded-full py-1 font-bold'>
                                 <p>3.82k</p>
                             </div>
                         </div>
@@ -140,7 +140,7 @@ const Status = () => {
                                     <p className='font-bold leading-9'>$ 24.5</p>
                                 </div>
                             </div>
-                            <div className='bg-[#f2f5ef] px-3 rounded-full py-1 font-bold'>
+                            <div className='bg-[#f2f5ef] px-3 rounded-full py-1 font-bold text-[14px] sm:text-[16px]'>
                                 <p>3.14k</p>
                             </div>
                         </div>
@@ -154,7 +154,7 @@ const Status = () => {
                                     <p className='font-bold leading-9'>$ 22.5</p>
                                 </div>
                             </div>
-                            <div className='bg-[#f2f5ef] px-3 rounded-full py-1 font-bold'>
+                            <div className='bg-[#f2f5ef] px-3 rounded-full py-1 font-bold text-[14px] sm:text-[16px]'>
                                 <p>2.84k</p>
                             </div>
                         </div>
@@ -168,7 +168,7 @@ const Status = () => {
                                     <p className='font-bold leading-9'>$20.4</p>
                                 </div>
                             </div>
-                            <div className='bg-[#f2f5ef] px-3 rounded-full py-1 font-bold'>
+                            <div className='bg-[#f2f5ef] px-3 rounded-full py-1 font-bold text-[14px] sm:text-[16px]'>
                                 <p>2.06k</p>
                             </div>
                         </div>

@@ -66,8 +66,8 @@ const OverviewChart = () => {
                     <div className='w-full'>
                         <h1 >This Month</h1>
                         <div className='flex  gap-5 w-full'>
-                            <p className='sm:text-2xl text-xl font-bold mt-2'>$24,568</p>
-                            <p className='bg-[#6dddbb2f] px-1 py-0 rounded-full flex justify-center items-center text-[#23a129fa] text-[14px]'>+ 2.65%</p>
+                            <p className='sm:text-2xl text-[16px] font-bold mt-2'>$24,568</p>
+                            <p className='bg-[#6dddbb2f] px-1 py-0 rounded-full flex justify-center items-center text-[#23a129fa] sm:text-[14px] text-[12px]'>+ 2.65%</p>
                         </div>
                         <div className='mt-9 '>
                             <div className='flex sm:w-[210px] w-full justify-between border-b-2 border-[#d4d2d2] border-solid'>

@@ -36,7 +36,7 @@ const DashboardBody = ({setOpenSide,openSide}) => {
 
     return (
         <div className='w-full bg-[#fffefe] overflow-x-hidden min-h-screen '>
-            <div className='w-full lg:ml-[-px] z-[999] ml-0 relative'>
+            <div className='w-full  z-[999] ml-0 relative '>
                 <div className='w-full '>
                     <DashboardHeader
                         openProfile={openProfile}
@@ -47,7 +47,7 @@ const DashboardBody = ({setOpenSide,openSide}) => {
                 </div>
                 <div className='mt-20  w-full flex gap-1 z-[-20]'>
                     <div className='w-full'>
-                        <div className='grid lg:grid-cols-3 grid-cols-1 gap-3 sm:px-9 px-4 w-full'>
+                        <div className='grid lg:grid-cols-3 grid-cols-1 gap-3 sm:px-9 sm::px-4 lg:px-0 w-full'>
 
                             <div className='flex justify-between shadow-xl px-3 h-[97px] py-6 rounded-md'>
                                 <div className='flex gap-5'>
@@ -58,11 +58,11 @@ const DashboardBody = ({setOpenSide,openSide}) => {
                                         /></p>
                                     <div>
                                         <h1 className='text-[#555557]'>Revenue</h1>
-                                        <p className='sm:text-xl text-[17px] font-bold'>$21,456</p>
+                                        <p className='text-[16px] font-bold'>$21,456</p>
                                     </div>
                                 </div>
                                 <div className='flex justify-center items-end '>
-                                    <p className='bg-[#6dddbb2f] px-1 rounded-full text-[#23a129fa]'>+ 2.65%</p>
+                                    <p className='bg-[#6dddbb2f] px-1 text-[14px] rounded-full text-[#23a129fa]'>+ 2.65%</p>
                                 </div>
                             </div>
 
@@ -75,11 +75,11 @@ const DashboardBody = ({setOpenSide,openSide}) => {
                                         /></p>
                                     <div>
                                         <h1 className='text-[#555557]'>Orders</h1>
-                                        <p className='sm:text-xl text-[17px] font-bold'>$5,643</p>
+                                        <p className='text-[16px] font-bold'>$5,643</p>
                                     </div>
                                 </div>
                                 <div className='flex justify-center items-end '>
-                                    <p className='bg-[#6dddbb2f] px-1 rounded-full text-[#23a129fa]'>- 0.82%</p>
+                                    <p className='bg-[#6dddbb2f] text-[14px]  px-1 rounded-full text-[#23a129fa]'>- 0.82%</p>
                                 </div>
                             </div>
 
@@ -92,18 +92,17 @@ const DashboardBody = ({setOpenSide,openSide}) => {
                                         /></p>
                                     <div>
                                         <h1 className='text-[#555557]'>Customers</h1>
-                                        <p className='sm:text-xl text-[17px] font-bold'>$45,254</p>
+                                        <p className='text-[16px] font-bold'>$45,254</p>
                                     </div>
                                 </div>
                                 <div className='flex justify-center items-end '>
-                                    <p className='bg-[#6dddbb2f] px-1 rounded-full text-[#23a129fa]'>- 1.04%</p>
+                                    <p className='bg-[#6dddbb2f] text-[14px] px-1 rounded-full text-[#23a129fa]'>- 1.04%</p>
                                 </div>
                             </div>
 
                         </div>
                         {/* chart section  */}
-                        <div className='w-full pb-14'>
-
+                        <div className='w-full pb-14 '>
                             <div className='w-full px-3'>
                                 <OverviewChart />
                             </div>
