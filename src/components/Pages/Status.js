@@ -83,7 +83,7 @@ const Status = () => {
 
                 </div>
 
-                <div className='w-full shadow-xl px-3 py-7'>
+                <div className='w-full shadow-xl px-3 '>
                     <div className='w-full flex justify-between items-center px-2 pt-3'>
                         <h1 className='font-bold'>Order Status</h1>
                         <p className='text-xl'>...</p>
