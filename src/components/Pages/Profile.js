@@ -32,7 +32,7 @@ const Profile = ({ openProfile }) => {
             <motion.div 
             variants={profileVariants}
             animate={openProfile ? 'openProfile':'closeProfile'}
-            className='lg:w-[250px] xl:min-w-[280px] 2xl:w-[310px] pr-3 fixed xl:right-[10px] 2xl:right-[3px] '>
+            className='lg:w-[250px] xl:min-w-[280px] 2xl:w-[310px] pr-3 fixed xl:right-[23px] 2xl:right-[3px] '>
                 <div className='shadow-2xl '>
                     <div className='cover-img relative w-full h-[100px]'>
                         <img className='w-full object-cover h-full rounded-md rounded-tl-lg rounded-tr-lg' src={coverImg} alt="" />
