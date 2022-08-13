@@ -71,17 +71,7 @@ const MobileSideBar = ({openSide}) => {
 
                     >
                         <div className="overflow-x-hidden " >
-                            {/* <div className="flex justify-between w-full pr-2 z-[787]">
-                                {
-                                    open && <p className="text-black">none</p>
-                                }
-                                <CgMenuRight
-                                    onClick={handleToggler}
-                                    className={`text-3xl hover:text-3xl rotate-180  cursor-pointer ${!open && 'ml-2'}`}
-
-                                />
-                            </div> */}
-
+                           
                             <div className=" mt-16 ">
                                 <motion.ul className=" min-h-[100vh]  overflow-x-hidden overflow-y-hidden px-2" >
                                     <div className="flex  justify-between items-center text-white font-bold">

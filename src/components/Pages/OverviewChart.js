@@ -45,7 +45,7 @@ const OverviewChart = () => {
     ]
 
     return (
-        <div className='w-full mt-14 shadow md:p-[5px] px-4 py-7'>
+        <div className='w-full mt-14 shadow md:px-[3]] px-4 py-7'>
             <div className='flex justify-between items-center w-full mb-4'>
                 <div>
                     <h1 className=' font-bold'>Overview</h1>

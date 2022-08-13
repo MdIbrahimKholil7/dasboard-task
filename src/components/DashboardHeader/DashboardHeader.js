@@ -13,7 +13,7 @@ const DashboardHeader = ({ setOpenProfile, openProfile,setOpenSide,openSide }) =
                 <div className='flex items-center gap-2'>
                     <CgMenuRight
                     onClick={()=>setOpenSide(!openSide)}
-                        className='sm:text-3xl text-xl hover:text-3xl rotate-180 lg:hidden block cursor-pointer ml-2'
+                        className='sm:text-3xl text-xl rotate-180 lg:hidden block cursor-pointer ml-2'
                     />
                     <h1 className='sm:text-2xl text-[15px]'>Dashboard</h1>
                 </div>
