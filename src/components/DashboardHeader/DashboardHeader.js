@@ -5,7 +5,7 @@ import { MdOutlineNotificationsNone } from 'react-icons/md';
 import { BsGearFill } from 'react-icons/bs';
 import flag from '../../assets/flag.webp'
 import actor from '../../assets/actor.jpg'
-const DashboardHeader = () => {
+const DashboardHeader = ({ setOpenProfile, openProfile }) => {
     return (
         <div className='w-full pt-5  sticky top-0 left-3 z-10'>
             <div className='flex justify-between items-center w-full'>
@@ -14,31 +14,31 @@ const DashboardHeader = () => {
                 </div>
                 <div className='flex items-center gap-5'>
                     <div>
-                        <FiSearch 
-                        className='text-2xl'
+                        <FiSearch
+                            className='text-2xl'
                         />
                     </div>
                     <div>
                         <img className='w-[30px] object-cover' src={flag} alt="" />
                     </div>
                     <div>
-                        <BiGridAlt 
-                        className='text-2xl'
+                        <BiGridAlt
+                            className='text-2xl'
                         />
                     </div>
                     <div className='relative'>
-                        <MdOutlineNotificationsNone 
-                        className='text-2xl'
+                        <MdOutlineNotificationsNone
+                            className='text-2xl'
                         />
-                          <div class=" rounded-full w-[20px] h-[20px] flex justify-center items-center bg-red-400 absolute top-[-8px] text-white left-[10px]">4</div>
+                        <div class=" rounded-full w-[20px] h-[20px] flex justify-center items-center bg-red-400 absolute top-[-8px] text-white left-[10px]">4</div>
                     </div>
                     <div className=''>
-                        <BsGearFill 
-                        className='text-2xl'
+                        <BsGearFill
+                            className='text-2xl'
                         />
-                      
+
                     </div>
-                    <div>
+                    <div className='cursor-pointer' onClick={() => setOpenProfile(!openProfile)}>
                         <img className='w-[30px] object-cover rounded-full' src={actor} alt="" />
                     </div>
                 </div>
